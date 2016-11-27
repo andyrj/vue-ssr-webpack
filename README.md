@@ -1,6 +1,6 @@
 # ssr-webpack
 
-> A Vue.js project
+> A Full Stack SSR Vue.js project
 
 ## Build Setup
 
