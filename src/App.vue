@@ -13,4 +13,7 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="sass">
+  @import 'bourbon';
+  @import 'neat';
+</style>
