@@ -8,13 +8,13 @@
 </template>
 
 <script>
-  // import { mapActions } from 'vuex'
+  import { mapActions } from 'vuex'
   // import { incrementCounter, decrementCounter, removeCounter } from '../actions'
   
   export default {
     name: 'counter',
-    props: ['counterId', 'count']
-    // methods: mapActions(['incrementCounter', 'decrementCounter', 'removeCounter'])
+    props: ['counterId', 'count'],
+    methods: mapActions(['incrementCounter', 'decrementCounter', 'removeCounter'])
   }
 </script>
 
