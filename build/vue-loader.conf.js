@@ -1,4 +1,3 @@
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var bourbon = require('node-bourbon')
 var neat = require('node-neat')
 
@@ -10,10 +9,8 @@ module.exports = {
     })
   ],
   loaders: {
-    css: ExtractTextPlugin.extract("css-loader"),
-    sass: ExtractTextPlugin.extract(
-      "css-loader!sass-loader?includePaths[]=" + bourbon.includePaths +
+    css: "css-loader",
+    sass: "css-loader!sass-loader?includePaths[]=" + bourbon.includePaths +
       "&includePaths[]=" + neat.includePaths[1]
-    )
   }
 }

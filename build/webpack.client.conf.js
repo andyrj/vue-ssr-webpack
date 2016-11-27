@@ -5,6 +5,8 @@ const HTMLPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const SWPrecachePlugin = require('sw-precache-webpack-plugin')
 let assign = require('lodash.assign');
+var bourbon = require('node-bourbon')
+var neat = require('node-neat')
 
 const config = Object.assign({}, base, {
   resolve: {
@@ -35,14 +37,13 @@ if (process.env.NODE_ENV === 'production') {
   // vueConfig is already included in the config via LoaderOptionsPlugin
   // here we overwrite the loader config for <style lang="stylus">
   // so they are extracted.
-  /* Trying to use the vue-cli way of including style loaders
   vueConfig.loaders = {
-    stylus: ExtractTextPlugin.extract({
-      loader: 'css-loader!stylus-loader',
+    sass: ExtractTextPlugin.extract({
+      loader: 'css-loader!sass-loader?includePaths[]=' + bourbon.includePaths + 
+        '&includePaths[]=' + neat.includePaths[1],
       fallbackLoader: 'vue-style-loader' // <- this is a dep of vue-loader
     })
   }
-  */
 
   config.plugins.push(
     new ExtractTextPlugin('styles.[hash].css'),
