@@ -24,12 +24,15 @@ module.exports = function setupDevServer (app, opts) {
   })
   app.use(devMiddleware)
   clientCompiler.plugin('done', () => {
+    /* this is no longer needed as we are loading html from js with vue-meta integration
     const fs = devMiddleware.fileSystem
     const filePath = path.join(clientConfig.output.path, 'index.html')
+
     if (fs.existsSync(filePath)) {
       const index = fs.readFileSync(filePath, 'utf-8')
       opts.indexUpdated(index)
     }
+    */
   })
 
   // hot middleware

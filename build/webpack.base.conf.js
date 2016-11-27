@@ -1,5 +1,12 @@
 const path = require('path')
 const vueConfig = require('./vue-loader.conf')
+const AssetsPlugin = require('assets-webpack-plugin')
+let assetsPluginInstance = new AssetsPlugin(
+  {
+    path: path.join(__dirname, '../dist/'),
+    filename: 'assets.json'
+  }
+)
 
 module.exports = {
   devtool: '#source-map',
@@ -22,6 +29,7 @@ module.exports = {
       'public': path.resolve(__dirname, '../public')
     }
   },
+  plugins: [assetsPluginInstance],
   module: {
     noParse: /es6-promise\.js$/, // avoid webpack shimming process
     rules: [

@@ -13,6 +13,9 @@
 
   export default {
     name: 'counters',
+    metaInfo: {
+      title: 'Counters'
+    },
     computed: {
       counters() {
         return this.$store.state.counters

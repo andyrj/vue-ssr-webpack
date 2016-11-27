@@ -2,16 +2,26 @@ import { app, router, store } from './app'
 
 const isDev = process.env.NODE_ENV !== 'production'
 
+const meta = app.$meta()
+
 // This exported function will be called by `bundleRenderer`.
 // This is where we perform data-prefetching to determine the
 // state of our application before actually rendering it.
 // Since data fetching is async, this function is expected to
 // return a Promise that resolves to the app instance.
 export default context => {
+  // this looks like a left over junk variable
   const s = isDev && Date.now()
+
+  const assets = require('json-loader!../dist/assets.json')
+
+  // add isDev to context for changing how we load our js and css assets in server.js
+  context.isDev = isDev
 
   // set router's location
   router.push(context.url)
+  context.meta = meta
+  context.assets = assets
   const matchedComponents = router.getMatchedComponents()
 
   // no matched routes

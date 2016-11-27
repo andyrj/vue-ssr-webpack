@@ -1,7 +1,6 @@
 const webpack = require('webpack')
 const base = require('./webpack.base.conf')
 const vueConfig = require('./vue-loader.conf')
-const HTMLPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const SWPrecachePlugin = require('sw-precache-webpack-plugin')
 let assign = require('lodash.assign');
@@ -23,10 +22,6 @@ const config = Object.assign({}, base, {
     // extract vendor chunks for better caching
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
-    }),
-    // generate output HTML
-    new HTMLPlugin({
-      template: 'src/index.template.html'
     })
   ])
 })

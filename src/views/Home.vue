@@ -23,6 +23,9 @@
 <script>
 export default {
   name: 'home',
+  metaInfo: {
+    title: 'Home'
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
