@@ -9,7 +9,7 @@ let assetsPluginInstance = new AssetsPlugin(
 )
 
 module.exports = {
-  devtool: '#source-map',
+  devtool: process.env.NODE_ENV !== 'production' ? '#source-map' : false,
   entry: {
     app: './src/client-entry.js',
     vendor: [
@@ -31,7 +31,7 @@ module.exports = {
   },
   plugins: [assetsPluginInstance],
   module: {
-    noParse: /es6-promise\.js$/, // avoid webpack shimming process
+    // noParse: /es6-promise\.js$/, // avoid webpack shimming process
     rules: [
       {
         test: /\.vue$/,
