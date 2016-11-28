@@ -1,5 +1,9 @@
-import 'es6-promise/auto'
+// import 'es6-promise/auto'
+import Promise from 'yaku'
 import { app, store } from './app'
+
+// make yaku polyfill promise implementation available
+window.Promise = Promise
 
 // prime the store with server-initialized state.
 // the state is determined during SSR and inlined in the page markup.

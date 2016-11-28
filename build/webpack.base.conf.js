@@ -13,7 +13,7 @@ module.exports = {
   entry: {
     app: './src/client-entry.js',
     vendor: [
-      'es6-promise',
+      'yaku',
       'vue',
       'vue-router',
       'vuex'

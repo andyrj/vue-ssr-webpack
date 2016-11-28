@@ -2,10 +2,9 @@ const webpack = require('webpack')
 const base = require('./webpack.base.conf')
 const vueConfig = require('./vue-loader.conf')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const SWPrecachePlugin = require('sw-precache-webpack-plugin')
-let assign = require('lodash.assign');
-var bourbon = require('node-bourbon')
-var neat = require('node-neat')
+let assign = require('lodash/assign')
+let bourbon = require('node-bourbon')
+let neat = require('node-neat')
 
 const config = Object.assign({}, base, {
   resolve: {
@@ -42,21 +41,9 @@ if (process.env.NODE_ENV === 'production') {
 
   config.plugins.push(
     new ExtractTextPlugin('styles.[hash].css'),
-    // this is needed in webpack 2 for minifying CSS
+		// this is needed in webpack 2 for minifying CSS
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    }),
-    // minify JS
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new SWPrecachePlugin({
-      cacheId: 'vue-hn',
-      filename: 'service-worker.js',
-      dontCacheBustUrlsMatching: /./,
-      staticFileGlobsIgnorePatterns: [/index\.html$/, /\.map$/]
     })
   )
 }
