@@ -11,7 +11,7 @@
     "build:client": "cross-env NODE_ENV=production webpack --optimize-minimize --config build/webpack.client.conf.js --progress --hide-modules",
     "build:server": "cross-env NODE_ENV=production webpack --optimize-minimize --config build/webpack.server.conf.js --progress --hide-modules",
     "test": "webpack --config build/webpack.test.node.conf.js && mocha ./test/test.node.bundle.js",
-    "test:dev": "webpack --config build/webpack.test.conf.js",
+    "test:dev": "webpack-dev-server --inline --hot --config build/webpack.test.conf.js",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "lint:fix": "eslint --fix --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
@@ -81,6 +81,7 @@
     "vue-template-compiler": "^2.1.0",
     "webpack": "^2.1.0-beta.27",
     "webpack-dev-middleware": "^1.8.3",
+    "webpack-dev-server": "^1.16.2",
     "webpack-hot-middleware": "^2.12.2",
     "webpack-merge": "^0.14.1"
   },
