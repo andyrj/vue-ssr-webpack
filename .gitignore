@@ -2,6 +2,7 @@
 node_modules/
 dist/
 npm-debug.log
-test/unit/coverage
+test/*.bundle.js
+test/units/coverage
 test/e2e/reports
 selenium-debug.log

@@ -38,6 +38,7 @@ var testConfig = {
 						})
 					],
 					loaders: {
+						js: "isparta-loader",
 						css: "null-loader",
 						sass: "null-loader"
 					}
@@ -56,13 +57,12 @@ var testConfig = {
 	},
 	devtool: 'inline-source-map',
 	output: {
-		path: path.join(__dirname, 'test'),
+		path: path.join(__dirname, '../test'),
 		filename: 'test.node.bundle.js'
 	},
 	plugins: [
     new webpack.NoErrorsPlugin()
   ]
 };
-
 
 module.exports = testConfig;

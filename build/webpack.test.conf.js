@@ -3,11 +3,7 @@ var path = require('path');
 
 var testConfig = {
   name: 'test',
-	entry: {
-		test: [
-			'mocha!./test/index.js'
-		],
-  },
+	entry: './test/index.js',
 	externals: [
     'fs'
   ],
@@ -55,6 +51,5 @@ var testConfig = {
     new webpack.NoErrorsPlugin()
   ]
 };
-
 
 module.exports = testConfig;
