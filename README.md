@@ -2,11 +2,23 @@
 
 > A Full Stack SSR vue-cli template project
 
+Uses the following Packages
+* Webpack 2
+* Vue 2.x
+* Vuex
+* Vue-Router
+* Express
+* Vue-Meta
+* Mocha
+* testdom (jsdom for unit tests in node)
+
 ## Build Setup
 
 ``` bash
 # install dependencies
 npm install
+# or if you have yarn installed
+yarn install
 
 # serve with hot reload at localhost:8080
 npm run dev
