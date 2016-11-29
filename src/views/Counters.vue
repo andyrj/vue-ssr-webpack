@@ -8,8 +8,8 @@
 
 <script>
   import counter from '../components/Counter.vue'
-  //import { addCounter } from '../actions'
   import { mapActions } from 'vuex'
+	import assign from 'lodash.assign'
 
   export default {
     name: 'counters',
@@ -21,7 +21,7 @@
         return this.$store.state.counters
       }
     },
-    methods: mapActions(['addCounter']),
+    methods: assign(mapActions(['addCounter']), { testMe: function(){ return 1} }),
     components: {
       counter
     }
