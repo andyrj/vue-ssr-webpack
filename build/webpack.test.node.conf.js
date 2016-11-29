@@ -39,7 +39,7 @@ var testConfig = {
         test: /\.js?$/,
 				// include: path.resolve('/home/dev/github/andyrj/vue-ssr-webpack/src/'),
         loader: 'isparta-loader',
-        exclude: /node_modules/
+        exclude: /(node_modules|test)/
       },
       {
         test: /\.vue$/,
