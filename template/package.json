@@ -1,8 +1,8 @@
 {
-  "name": "vue-ssr-webpack",
+  "name": "{{ name }}",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Andy Johnson <andyrjohnson82@gmail.com>",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
   "private": true,
   "scripts": {
     "dev": "node src/server",
