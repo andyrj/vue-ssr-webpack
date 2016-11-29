@@ -18,12 +18,26 @@ var testConfig = {
 	},
   target: 'node',
   externals: nodeModules,
+	plugins: [
+		new webpack.LoaderOptionsPlugin({
+			options: {
+				isparta: {
+				embedSource: true,
+				noAutoWrap: true,
+				// these babel options will be passed only to isparta and not to babel-loader
+				babel: {
+						presets: ['es2015', 'stage-2']
+				}
+			}
+		}
+	})
+	],
   module: {
 		rules: [
 			{ // this pre loader should instrument code for test coverage
         enforce: 'pre',
         test: /\.js?$/,
-				include: path.resolve('../src/'),
+				// include: path.resolve('/home/dev/github/andyrj/vue-ssr-webpack/src/'),
         loader: 'isparta-loader',
         exclude: /node_modules/
       },
@@ -59,10 +73,7 @@ var testConfig = {
 	output: {
 		path: path.join(__dirname, '../test'),
 		filename: 'test.node.bundle.js'
-	},
-	plugins: [
-    new webpack.NoErrorsPlugin()
-  ]
-};
+	}
+}
 
 module.exports = testConfig;

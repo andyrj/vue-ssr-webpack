@@ -2112,16 +2112,6 @@ fresh@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.3.0.tgz#651f838e22424e7566de161d8358caa199f83d4f"
 
-fs-extra@^0.30.0:
-  version "0.30.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.30.0.tgz#f233ffcc08d4da7d432daa449776989db1df93f0"
-  dependencies:
-    graceful-fs "^4.1.2"
-    jsonfile "^2.1.0"
-    klaw "^1.0.0"
-    path-is-absolute "^1.0.0"
-    rimraf "^2.2.8"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -2280,7 +2270,7 @@ globule@^1.0.0:
     lodash "~4.16.4"
     minimatch "~3.0.2"
 
-graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
+graceful-fs@^4.1.2:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
@@ -2519,7 +2509,7 @@ inquirer@^0.12.0:
     strip-ansi "^3.0.0"
     through "^2.3.6"
 
-interpret@^1.0.0, interpret@^1.0.1:
+interpret@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.1.tgz#d579fb7f693b858004947af39fa0db49f795602c"
 
@@ -2692,13 +2682,21 @@ isobject@^2.0.0:
   dependencies:
     isarray "1.0.0"
 
+isparta-instrumenter-loader@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/isparta-instrumenter-loader/-/isparta-instrumenter-loader-1.0.1.tgz#9c308c9be03a7bc7e30bad9b6ee87c203e029526"
+  dependencies:
+    isparta "^4.0.0"
+    loader-utils "^0.2.6"
+    lodash "^3.5.0"
+
 isparta-loader@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isparta-loader/-/isparta-loader-2.0.0.tgz#4425f496c93f765bbceb4dd938576da307566ed1"
   dependencies:
     isparta "4.x.x"
 
-isparta@4.x.x:
+isparta@4.x.x, isparta@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/isparta/-/isparta-4.0.0.tgz#1de91996f480b22dcb1aca8510255bae1574446e"
   dependencies:
@@ -2764,7 +2762,7 @@ istanbul-reports@^1.0.0:
   dependencies:
     handlebars "^4.0.3"
 
-istanbul@^0.4.0, istanbul@^0.4.5:
+istanbul@*, istanbul@^0.4.0, istanbul@^0.4.5:
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/istanbul/-/istanbul-0.4.5.tgz#65c7d73d4c4da84d4f3ac310b918fb0b8033733b"
   dependencies:
@@ -2904,12 +2902,6 @@ json5@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
-jsonfile@^2.1.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
-  optionalDependencies:
-    graceful-fs "^4.1.6"
-
 jsonify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
@@ -2931,12 +2923,6 @@ kind-of@^3.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.0.4.tgz#7b8ecf18a4e17f8269d73b501c9f232c96887a74"
   dependencies:
     is-buffer "^1.0.2"
-
-klaw@^1.0.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/klaw/-/klaw-1.3.1.tgz#4088433b46b3b1ba259d78785d8e96f73ba02439"
-  optionalDependencies:
-    graceful-fs "^4.1.9"
 
 lazy-cache@^1.0.3:
   version "1.0.4"
@@ -2969,7 +2955,7 @@ loader-runner@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.2.0.tgz#824c1b699c4e7a2b6501b85902d5b862bf45b3fa"
 
-loader-utils@0.2.x, loader-utils@^0.2.10, loader-utils@^0.2.11, loader-utils@^0.2.13, loader-utils@^0.2.15, loader-utils@^0.2.16, loader-utils@^0.2.3, loader-utils@^0.2.7, loader-utils@~0.2.15, loader-utils@~0.2.2, loader-utils@~0.2.5:
+loader-utils@0.2.x, loader-utils@^0.2.10, loader-utils@^0.2.11, loader-utils@^0.2.15, loader-utils@^0.2.16, loader-utils@^0.2.3, loader-utils@^0.2.6, loader-utils@^0.2.7, loader-utils@~0.2.15, loader-utils@~0.2.2, loader-utils@~0.2.5:
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.16.tgz#f08632066ed8282835dff88dfb52704765adee6d"
   dependencies:
@@ -3208,6 +3194,10 @@ lodash.words@^3.0.0:
   dependencies:
     lodash._root "^3.0.0"
 
+lodash@^3.5.0:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+
 lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.2, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
@@ -3391,6 +3381,12 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   dependencies:
     minimist "0.0.8"
 
+mocha-istanbul@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/mocha-istanbul/-/mocha-istanbul-0.3.0.tgz#53c74d3e85ff6e2c7d1075b0e57e3174abea6446"
+  dependencies:
+    istanbul "*"
+
 mocha-lcov-reporter@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mocha-lcov-reporter/-/mocha-lcov-reporter-1.2.0.tgz#8f7ba1512ae1271611d927669d99b6c2e99f058f"
@@ -3403,24 +3399,6 @@ mocha-loader@^1.0.0:
     loader-utils "~0.2.15"
     script-loader "~0.7.0"
     style-loader "~0.13.1"
-
-mocha-webpack@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/mocha-webpack/-/mocha-webpack-0.7.0.tgz#d3ae5ac7ddcf29cf947e8b0eed773fa4228e0cce"
-  dependencies:
-    anymatch "^1.3.0"
-    fs-extra "^0.30.0"
-    glob-parent "^2.0.0"
-    interpret "^1.0.1"
-    invariant "^2.2.0"
-    is-glob "^2.0.1"
-    loader-utils "^0.2.13"
-    lodash "^4.3.0"
-    normalize-path "^2.0.1"
-    object-hash "^1.1.2"
-    webpack-info-plugin "^0.1.0"
-    webpack-sources "^0.1.1"
-    yargs "^4.8.0"
 
 mocha@^3.2.0:
   version "3.2.0"
@@ -3670,7 +3648,7 @@ object-assign@^4.0.0, object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.0.tgz#7a3b3d0e98063d43f4c03f2e8ae6cd51a86883a0"
 
-object-hash@^1.1.2, object-hash@^1.1.4:
+object-hash@^1.1.4:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-1.1.5.tgz#bdd844e030d0861b692ca175c6cab6868ec233d7"
 
@@ -5201,12 +5179,6 @@ webpack-hot-middleware@^2.12.2:
     querystring "^0.2.0"
     strip-ansi "^3.0.0"
 
-webpack-info-plugin@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/webpack-info-plugin/-/webpack-info-plugin-0.1.0.tgz#dffe7aa88fcb96c59cc450976421eaf98cdb7901"
-  dependencies:
-    chalk "^1.1.1"
-
 webpack-merge@^0.14.1:
   version "0.14.1"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-0.14.1.tgz#d6bfe6d9360a024e1e7f8e6383ae735f1737cd23"
@@ -5216,7 +5188,7 @@ webpack-merge@^0.14.1:
     lodash.isplainobject "^3.2.0"
     lodash.merge "^3.3.2"
 
-webpack-sources@^0.1.0, webpack-sources@^0.1.1:
+webpack-sources@^0.1.0:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-0.1.3.tgz#15ce2fb79d0a1da727444ba7c757bf164294f310"
   dependencies:
@@ -5373,7 +5345,7 @@ yargs-parser@^4.0.2, yargs-parser@^4.1.0:
   dependencies:
     camelcase "^3.0.0"
 
-yargs@^4.7.1, yargs@^4.8.0:
+yargs@^4.7.1:
   version "4.8.1"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-4.8.1.tgz#c0c42924ca4aaa6b0e6da1739dfb216439f9ddc0"
   dependencies:
