@@ -1,9 +1,2 @@
+node_modules
 .DS_Store
-node_modules/
-coverage/
-dist/
-npm-debug.log
-test/*.bundle.js
-test/units/coverage
-test/e2e/reports
-selenium-debug.log

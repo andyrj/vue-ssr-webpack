@@ -1,6 +1,6 @@
 <template>
   <div class='counter'>
-    {{ count }}
+    \{{ count }}
     <input type='button' value='+' @click='incrementCounter(counterId)'/>
     <input type='button' value='-' @click='decrementCounter(counterId)'/>
     <input type='button' value='X' @click='removeCounter(counterId)' />

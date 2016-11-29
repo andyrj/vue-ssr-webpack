@@ -1,6 +1,6 @@
 # ssr-webpack
 
-> A Full Stack SSR Vue.js project
+> A Full Stack SSR vue-cli template project
 
 ## Build Setup
 
@@ -16,6 +16,9 @@ npm run build
 
 # run unit tests
 npm run test
+
+# run unit tests in auto-refreshing browser tab @ localhost:8888/test/
+npm run test:dev
 
 # run unit tests with coverage reporting
 npm run test:cov
