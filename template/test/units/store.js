@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import store from '../../src/store'
-import { expect, assert } from 'chai'
+// import { expect, assert } from 'chai'
 
 describe('Store', function() {
 	let counters = store.state.counters

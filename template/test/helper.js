@@ -1,5 +1,7 @@
 // make dom available to node tests
-require('testdom')(`
+let dom = require('testdom')
+
+let html = dom(`
 <html>
 <body>
 	<div id='app'></div>
