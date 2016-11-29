@@ -12,7 +12,7 @@
     "build:server": "cross-env NODE_ENV=production webpack --optimize-minimize --config build/webpack.server.conf.js --progress --hide-modules",
     "build:nodeTest": "webpack --config build/webpack.test.node.conf.js",
     "test": "npm run build:nodeTest && mocha ./test/test.node.bundle.js",
-    "test:dev": "webpack-dev-server --hot --inline --config build/webpack.test.node.conf.js",
+    "test:dev": "webpack-dev-server --inline --config build/webpack.test.conf.js",
     "test:cov": "npm run build:nodeTest && isparta cover --no-default-excludes -x '**/node_modules/**' -x '**/test/helper.js' _mocha -- --recursive",
     "test:codacy": "npm run build:nodeTest && isparta cover --no-default-excludes --report=text  -x '**/node_modules/**' -x '**/test/helper.js' _mocha --report lcovonly -- | cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage && rm -rf ./coverage",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",

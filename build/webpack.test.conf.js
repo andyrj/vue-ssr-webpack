@@ -3,7 +3,7 @@ var path = require('path');
 
 var testConfig = {
   name: 'test',
-	entry: './test/index.js',
+	entry: './test/browser-entry.js',
 	externals: [
     'fs'
   ],
