@@ -15,13 +15,9 @@ npm run dev
 npm run build
 
 # run unit tests
-npm run unit
+npm run test
 
-# run e2e tests
-npm run e2e
+# run unit tests with coverage reporting
+npm run test:cov
 
-# run all tests
-npm test
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
