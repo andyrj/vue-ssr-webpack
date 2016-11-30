@@ -18,6 +18,9 @@ var testConfig = {
 	},
   target: 'node',
   externals: nodeModules,
+	resolve: {
+		alias: {vue: 'vue/dist/vue.js'}
+	},
 	plugins: [
 		new webpack.LoaderOptionsPlugin({
 			options: {

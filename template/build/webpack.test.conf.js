@@ -7,6 +7,9 @@ var testConfig = {
 	externals: [
     'fs'
   ],
+	resolve: {
+    alias: {vue: 'vue/dist/vue.js'}
+	},
 	module: {
     rules: [
       {

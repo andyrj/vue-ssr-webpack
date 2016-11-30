@@ -13,16 +13,14 @@ describe('Counters View', function() {
 
 	it('should place a div with class=counters on dom', function() {
 		let app = new Vue({
-			template: `<counters></counters>`,
+			el: '#app',
 			components: {
 				Counters
 			},
-			store
-		}).$mount('#app')
-		var element =  document.getElementsByClassName('counters');
-		//console.log(element)
-		// console.log(html)
-		// console.log(document)
+			store,
+			render: h => h(Counters)
+		})
+		var element =  document.getElementsByClassName('counters')
 		expect(element).to.not.equal('undefined')
 		expect(element).to.not.equal(null)
 	})
