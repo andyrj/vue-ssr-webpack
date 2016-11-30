@@ -7,7 +7,8 @@ window.Promise = Promise
 
 // prime the store with server-initialized state.
 // the state is determined during SSR and inlined in the page markup.
-store.replaceState(window.__INITIAL_STATE__)
+const initState = JSON.parse(document.getElementById('initState').innerHTML)
+store.replaceState(initState)
 
 // actually mount to DOM
 app.$mount('#app')

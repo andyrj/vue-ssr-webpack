@@ -6,7 +6,7 @@ const path = require('path')
 const express = require('express')
 const favicon = require('serve-favicon')
 const compression = require('compression')
-const serialize = require('serialize-javascript')
+// const serialize = require('serialize-javascript')
 const resolve = file => path.resolve(__dirname, file)
 
 const app = express()
@@ -102,9 +102,9 @@ app.get('*', (req, res) => {
     // embed initial store state
     if (context.initialState) {
       res.write(
-        `<script>window.__INITIAL_STATE__=${
-          serialize(context.initialState, { isJSON: true })
-        }</script>`
+        `<script id='initState' type='application/json'>
+          ${JSON.stringify(context.initialState)}
+        </script>`
       )
     }
 
