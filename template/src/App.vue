@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <router-link to='/'>Home</router-link>
-    <router-link to='/counters'>Counters!</router-link>
+		<ul>
+			<li><router-link to='/'>Home</router-link></li>
+    	<li><router-link to='/counters'>Counters!</router-link></li>
+    </ul>
     <img src="./assets/logo.png">
     <router-view></router-view>
   </div>
@@ -19,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
   @import 'bourbon';
   @import 'neat';
 </style>

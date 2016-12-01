@@ -18,7 +18,6 @@ const store = new Vuex.Store({
       counters.push(0)
     },
     COUNTER_REMOVE: ({ counters }, counterId) => {
-      // may cause extra work in vdom layer, there may be a better way
       counters = counters.splice(counterId, 1)
     }
   },

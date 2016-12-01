@@ -32,10 +32,27 @@ if (process.env.NODE_ENV === 'production') {
   // here we overwrite the loader config for <style lang="stylus">
   // so they are extracted.
   vueConfig.loaders = {
+    css: ExtractTextPlugin.extract({
+			  loader: 'css-loader',
+      fallbackLoader: 'vue-style-loader'
+		}),
+		less: ExtractTextPlugin.extract({
+			  loader: 'css-loader!less-loader',
+      fallbackLoader: 'vue-style-loader'
+		}),
+		stylus: ExtractTextPlugin.extract({
+			  loader: 'css-loader!stylus-loader',
+      fallbackLoader: 'vue-style-loader'
+		}),
+		scss: ExtractTextPlugin.extract({
+			  loader: 'css-loader!sass-loader?includePaths[]=' + bourbon.includePaths + 
+        '&includePaths[]=' + neat.includePaths[1],
+      fallbackLoader: 'vue-style-loader'
+		}),
     sass: ExtractTextPlugin.extract({
       loader: 'css-loader!sass-loader?includePaths[]=' + bourbon.includePaths + 
         '&includePaths[]=' + neat.includePaths[1],
-      fallbackLoader: 'vue-style-loader' // <- this is a dep of vue-loader
+      fallbackLoader: 'vue-style-loader'
     })
   }
 
@@ -44,7 +61,9 @@ if (process.env.NODE_ENV === 'production') {
 		// this is needed in webpack 2 for minifying CSS
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
+		// dedupe and minify css after webpack build is finished
+    new WebpackShellPlugin({onBuildExit:['ls -d1 dist/styles* | xargs -I {} ./node_modules/.bin/cleancss -o {} {}']})
   )
 }
 
