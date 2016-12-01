@@ -15,8 +15,10 @@ module.exports = {
     vendor: [
       'yaku',
       'vue',
+			'vue-meta',
       'vue-router',
-      'vuex'
+      'vuex',
+			'vuex-router-sync'
     ]
   },
   output: {

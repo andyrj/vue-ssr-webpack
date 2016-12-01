@@ -2,6 +2,7 @@ const webpack = require('webpack')
 const base = require('./webpack.base.conf')
 const vueConfig = require('./vue-loader.conf')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const WebpackShellPlugin = require('webpack-shell-plugin')
 let assign = require('lodash/assign')
 let bourbon = require('node-bourbon')
 let neat = require('node-neat')
@@ -22,7 +23,7 @@ const config = Object.assign({}, base, {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     })
-  ])
+	])
 })
 
 if (process.env.NODE_ENV === 'production') {
@@ -32,7 +33,7 @@ if (process.env.NODE_ENV === 'production') {
   // here we overwrite the loader config for <style lang="stylus">
   // so they are extracted.
   vueConfig.loaders = {
-    css: ExtractTextPlugin.extract({
+		css: ExtractTextPlugin.extract({
 			  loader: 'css-loader',
       fallbackLoader: 'vue-style-loader'
 		}),

@@ -24,6 +24,9 @@ var testConfig = {
 					],
 					loaders: {
 						css: "null-loader",
+						less: "null-loader",
+						stylus: "null-loader",
+						scss: "null-loader",
 						sass: "null-loader"
 					}
 				}
