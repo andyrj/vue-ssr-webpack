@@ -3,9 +3,6 @@ const base = require('./webpack.base.conf')
 const vueConfig = require('./vue-loader.conf')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const WebpackShellPlugin = require('webpack-shell-plugin')
-let assign = require('lodash/assign')
-let bourbon = require('node-bourbon')
-let neat = require('node-neat')
 
 const config = Object.assign({}, base, {
   resolve: {
@@ -46,13 +43,11 @@ if (process.env.NODE_ENV === 'production') {
       fallbackLoader: 'vue-style-loader'
 		}),
 		scss: ExtractTextPlugin.extract({
-			  loader: 'css-loader!sass-loader?includePaths[]=' + bourbon.includePaths + 
-        '&includePaths[]=' + neat.includePaths[1],
+			  loader: 'css-loader!sass-loader',
       fallbackLoader: 'vue-style-loader'
 		}),
     sass: ExtractTextPlugin.extract({
-      loader: 'css-loader!sass-loader?includePaths[]=' + bourbon.includePaths + 
-        '&includePaths[]=' + neat.includePaths[1],
+      loader: 'css-loader!sass-loader',
       fallbackLoader: 'vue-style-loader'
     })
   }

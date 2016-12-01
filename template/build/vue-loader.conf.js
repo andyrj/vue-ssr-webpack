@@ -1,6 +1,3 @@
-var bourbon = require('node-bourbon')
-var neat = require('node-neat')
-
 module.exports = {
   preserveWhitespace: false,
   postcss: [
@@ -12,9 +9,7 @@ module.exports = {
     css: "css-loader",
 		less: "css-loader!less-loader",
 		stylus: "css-loader!stylus-loader",
-		scss: "css-loader!sass-loader?includePaths[]=" + bourbon.includePaths +
-      "&includePaths[]=" + neat.includePaths[1],
-    sass: "css-loader!sass-loader?includePaths[]=" + bourbon.includePaths +
-      "&includePaths[]=" + neat.includePaths[1]
+		scss: "css-loader!sass-loader",
+    sass: "css-loader!sass-loader"
   }
 }
