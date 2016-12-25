@@ -22,6 +22,4 @@ export default {
 </script>
 
 <style lang="scss">
-  @import 'bourbon';
-  @import 'neat';
 </style>
