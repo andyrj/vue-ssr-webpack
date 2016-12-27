@@ -13,6 +13,7 @@ module.exports = {
   entry: {
     app: './src/client-entry.js',
     vendor: [
+			'isomorphic-fetch',
       'yaku',
       'vue',
 			'vue-meta',
